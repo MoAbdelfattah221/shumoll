@@ -1,0 +1,213 @@
+/* Start Variables */
+:root {
+  --main-color: #e9966f;
+  --transition: 0.3s;
+}
+::selection{
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* End Variables */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  height: auto;
+  overflow-x: hidden;
+}
+/* Start Header */
+.main{
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.main::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .container .logo{
+  width: 70px;
+}
+header .container .icon{
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  header .container .icon{
+    display: none;
+  }
+}
+header .container ul li a{
+  background-color: var(--main-color);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+header .container ul li a:hover{
+  background-color: transparent;
+}
+@media (max-width: 991px) {
+  header .container ul{
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: -1000px;
+    height: 50vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 30px !important;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+  header .container ul li{
+    margin-bottom: 20px;
+  }
+  header .container ul li a{
+    background-color: transparent;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 20px;
+  }
+}
+header .container ul div .cancel{
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  header .container ul div{
+    display: none !important;
+  }
+}
+/* Start Content */
+.main .content .container{
+  height: calc(100vh - 86.58px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .content .container h1{
+  font-size: 75px;
+}
+@media (max-width: 767px) {
+  .main .content .container h1{
+    font-size: 30px;
+  }
+}
+/* Start teachers */
+.teachers{
+  padding-top: 80px;
+}
+.teachers .container h2{
+  width: fit-content;
+  font-size: 35px;
+  margin-bottom: 15px !important;
+}
+.teachers .container h2::before{
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: -15px;
+  background-color: var(--main-color);
+}
+.teachers .container .row div a img{
+  width: 300px;
+}
+.teachers .container .row div a h4{
+  color: var(--main-color);
+}
+.about .container .content h4{
+  width: fit-content;
+}
+.about .container .content h4::before{
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: -15px;
+  background-color: var(--main-color);
+}
+.about .container .content{
+  flex-basis: 48%;
+}
+.about .container img{
+  width: 400px;
+  flex-basis: 48%;
+}
+@media (max-width: 991px) {
+  .about .container{
+    flex-direction: column;
+  }
+}
+.contact{
+  padding-bottom: 80px;
+}
+.contact h2{
+  width: fit-content;
+}
+.contact h2::before{
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: -15px;
+  background-color: var(--main-color);
+}
+.contact .container form{
+  width: 500px;
+}
+.contact .container form input,
+.contact .container form textarea,
+.contact .container form button{
+  outline: none;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.contact .container form input:focus,
+.contact .container form textarea:focus{
+  box-shadow: 0 0 0 0.25rem rgb(233 150 111 / 50%);
+}
+.contact .container form textarea{
+  height: 200px;
+  resize: none;
+}
+.contact .container form button{
+  width: fit-content;
+  background-color: var(--main-color);
+}
+.contact .container form button:hover{
+  color: var(--main-color) !important;
+  background-color: #fff;
+}
+footer{
+  background-color: var(--main-color);
+}
+@media (max-width: 767px) {
+  footer .container p{
+    font-size: 10px;
+  }
+}
+.active{
+  right: 0 !important;
+}
